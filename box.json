@@ -1,0 +1,38 @@
+{
+    "name":"testmodule",
+    "version":"0.0.0",
+    "author":"",
+    "location":"mjclemente/testmodule#v0.0.0",
+    "homepage":"https://github.com/mjclemente/testmodule",
+    "documentation":"https://github.com/mjclemente/testmodule",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/mjclemente/testmodule"
+    },
+    "bugs":"https://github.com/mjclemente/testmodule/issues",
+    "slug":"testmodule",
+    "shortDescription":"Short Module Description",
+    "description":"Short Module Description",
+    "type":"modules",
+    "dependencies":{
+        
+    },
+    "devDependencies":{
+        "coldbox":"^4.3.0+188",
+        "testbox":"^2.4.0+80"
+    },
+    "installPaths":{
+        "testbox":"testbox",
+        "coldbox":"tests/resources/app/coldbox"
+    },
+    "scripts":{
+        "postVersion":"package set location='mjclemente/testmodule#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push && !git push --tags"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ]
+}
